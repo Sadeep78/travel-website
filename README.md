@@ -9,11 +9,17 @@ I successfully designed and developed a full-stack travel management web applica
 A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL**, and a vanilla HTML/CSS/JS frontend. Browse destinations, book tours, send inquiries, and manage bookings from an admin portal.
 
 💻 Tech Stack
+
 🔹 Node.js
+
 🔹 Express.js
+
 🔹 MySQL
+
 🔹 HTML5, CSS3 & JavaScript
+
 🔹 Session-Based Authentication
+
 
 ✨ Key Features Implemented
 
