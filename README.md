@@ -1,12 +1,45 @@
 <img width="1894" height="848" alt="Screenshot 2026-05-29 210707" src="https://github.com/user-attachments/assets/095274b0-7284-443b-9879-f4679c10da07" />
 <img width="1882" height="851" alt="Screenshot 2026-05-29 211058" src="https://github.com/user-attachments/assets/f53500a6-3f24-4f0c-af46-dfba54eba8f1" />
-<img width="1888" height="845" alt="Screenshot 2026-05-29 210933" src="https://github.com/user-attachments/assets/24b9d88f-e5f2-4bb7-8e4e-c048536913d8" />
 <img width="1881" height="853" alt="Screenshot 2026-05-29 210850" src="https://github.com/user-attachments/assets/cc5fece6-0e74-488b-97f8-0cdf2b20521c" />
-# Travel Partner
+<img width="1437" height="875" alt="Screenshot 2026-05-30 103549" src="https://github.com/user-attachments/assets/0a5c4e9f-8907-481c-8a44-7fec08c6e3c6" />
 
+🚀 Excited to Share My Latest Project – Travel Partner Website! 🌍✈️
+
+I successfully designed and developed a full-stack travel management web application independently, handling both frontend and backend development.
 A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL**, and a vanilla HTML/CSS/JS frontend. Browse destinations, book tours, send inquiries, and manage bookings from an admin portal.
 
-## Features
+💻 Tech Stack
+🔹 Node.js
+🔹 Express.js
+🔹 MySQL
+🔹 HTML5, CSS3 & JavaScript
+🔹 Session-Based Authentication
+
+✨ Key Features Implemented
+
+🔐 User Registration & Login System
+👤 User Profile Management
+🌍 Destination Browsing & Search
+🔎 Advanced Filtering Options
+🗺️ Featured Travel Destinations
+🛒 Tour Booking & Checkout Process
+📧 Contact & Inquiry Management
+📊 Admin Dashboard
+📋 Booking Management System
+👥 Traveler Quantity Management
+💾 Database Design & Integration
+🔒 Authentication & Session Management
+📱 Responsive User Interface
+⚡ REST API Development
+🚀 Automated Database Setup & Seeding
+
+🎯 What I Learned
+✅ Full-Stack Development
+✅ Database Design & Management
+✅ Authentication & Security Concepts
+✅ API Development
+✅ Problem Solving & Debugging
+✅ Project Architecture & Deployment Preparation
 
 - Destination catalog with search, category, budget, and featured filters
 - API-driven homepage sections (featured tours, map grid, popular list)
