@@ -21,31 +21,53 @@ A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL*
 🔹 Session-Based Authentication
 
 
+
 ✨ Key Features Implemented
 
 🔐 User Registration & Login System
+
 👤 User Profile Management
+
 🌍 Destination Browsing & Search
+
 🔎 Advanced Filtering Options
+
 🗺️ Featured Travel Destinations
+
 🛒 Tour Booking & Checkout Process
+
 📧 Contact & Inquiry Management
+
 📊 Admin Dashboard
+
 📋 Booking Management System
-👥 Traveler Quantity Management
+
 💾 Database Design & Integration
+
 🔒 Authentication & Session Management
+
 📱 Responsive User Interface
+
 ⚡ REST API Development
+
 🚀 Automated Database Setup & Seeding
 
+
+
 🎯 What I Learned
+
 ✅ Full-Stack Development
+
 ✅ Database Design & Management
+
 ✅ Authentication & Security Concepts
+
 ✅ API Development
+
 ✅ Problem Solving & Debugging
+
 ✅ Project Architecture & Deployment Preparation
+
 
 - Destination catalog with search, category, budget, and featured filters
 - API-driven homepage sections (featured tours, map grid, popular list)
@@ -54,10 +76,14 @@ A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL*
 - Admin dashboard for bookings and contact inquiries
 - Automatic database creation, migrations, and seed data on startup
 
+
+
 ## Requirements
 
 - Node.js 18+
+  
 - MySQL 8+ (optional but recommended; without MySQL only read-only destination browsing works)
+
 
 ## Setup
 
