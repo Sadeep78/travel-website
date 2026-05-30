@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Partner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress-bar"></span></div>
+    <nav id="top" class="top-nav">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <span class="brand-mark">🧭</span>
+          <div>
+            <strong>Travel Partner</strong>
+            <small>Tailored journeys for every traveler</small>
+          </div>
+        </div>
+
+        <button id="mobileMenuToggle" class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-content" id="navContent">
+          <div class="nav-links">
+            <a href="#browse" class="nav-link">Browse Tours</a>
+            <a href="#essentials" class="nav-link">Essentials</a>
+            <a href="#story" class="nav-link">Our Story</a>
+            <a href="#blog" class="nav-link">Blog</a>
+            <a href="#destinations" class="nav-link">Popular</a>
+          </div>
+
+          <div class="nav-right">
+            <div class="nav-search">
+              <input type="text" id="searchInput" placeholder="Search destinations..." aria-label="Search destinations" />
+              <button id="searchButton" class="search-btn" aria-label="Submit Search">🔎</button>
+            </div>
+            
+            <a href="#srilanka" class="icon-btn" aria-label="Map" title="View Map">📍</a>
+            
+            <div class="auth-section" id="authSection">
+              <a href="login.html" class="btn btn-login-nav" id="loginBtn">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content scroll-reveal-instant">
+        <div class="hero-copy">
+          <p class="eyebrow">Explore curated journeys</p>
+          <h1>Travel Partner makes your next adventure effortless</h1>
+          <p class="hero-description">Plan memorable trips with local insight, premium packages, and trusted support from start to finish.</p>
+          <div class="hero-actions">
+            <a href="#browse" class="btn btn-primary">Browse Tours</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-search-panel scroll-reveal scroll-reveal--up" style="--reveal-delay: 180ms">
+        <div class="search-item">
+          <span>📍</span>
+          <div>
+            <p class="search-item-label">Destination</p>
+            <select id="heroDestSelect" class="hero-search-select">
+              <option value="">All destinations</option>
+            </select>
+          </div>
+        </div>
+        <div class="search-item">
+          <span>📅</span>
+          <div>
+            <p class="search-item-label">Travel date</p>
+            <input type="date" id="heroDateInput" class="hero-search-input" aria-label="Select travel date" />
+          </div>
+        </div>
+        <div class="search-item">
+          <span>💰</span>
+          <div>
+            <p class="search-item-label">Max Budget</p>
+            <select id="heroBudgetSelect" class="hero-search-select">
+              <option value="">Any Budget</option>
+              <option value="1300">Under $1,300</option>
+              <option value="1500">Under $1,500</option>
+              <option value="1600">Under $1,600</option>
+            </select>
+          </div>
+        </div>
+        <div class="search-item">
+          <span>🎒</span>
+          <div>
+            <p class="search-item-label">Trip Style</p>
+            <select id="heroStyleSelect" class="hero-search-select">
+              <option value="">All Styles</option>
+              <option value="Scenic">Scenic & Highlands</option>
+              <option value="Cultural">Culture & History</option>
+              <option value="Coastal">Coastal & Wildlife</option>
+            </select>
+          </div>
+        </div>
+        <button id="heroSearchBtn" class="btn btn-primary search-cta" style="border:none; cursor:pointer;">Search trips</button>
+      </div>
+    </header>
+
+    <section id="browse" class="browse-section scroll-reveal scroll-reveal--fade">
+      <div class="section-header scroll-reveal scroll-reveal--up">
+        <p class="eyebrow">Browse Tours</p>
+        <h2>Featured Sri Lanka destinations</h2>
+      </div>
+      <div class="browse-grid" id="browseGrid" aria-live="polite">
+        <p class="section-loading">Loading featured tours…</p>
+      </div>
+    </section>
+
+    <main>
+      <section id="essentials" class="why-section scroll-reveal scroll-reveal--fade">
+        <div class="section-header scroll-reveal scroll-reveal--up">
+          <p class="eyebrow">Trip Essentials</p>
+          <h2>What you need for a perfect journey</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card scroll-reveal scroll-reveal--up" style="--reveal-delay: 0ms">
+            <div class="feature-icon">⭐</div>
+            <h3>Trusted service</h3>
+            <p>We connect you to vetted travel experiences and local experts.</p>
+          </article>
+          <article class="feature-card scroll-reveal scroll-reveal--up" style="--reveal-delay: 100ms">
+            <div class="feature-icon">💼</div>
+            <h3>Expert support</h3>
+            <p>Our travel advisors guide every booking from start to finish.</p>
+          </article>
+          <article class="feature-card scroll-reveal scroll-reveal--up" style="--reveal-delay: 200ms">
+            <div class="feature-icon">🗺️</div>
+            <h3>Curated routes</h3>
+            <p>Discover destinations with meaningful experiences and great value.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="categories" class="categories-section scroll-reveal scroll-reveal--fade">
+        <div class="section-header scroll-reveal scroll-reveal--up">
+          <p class="eyebrow">Travel categories</p>
+          <h2>Choose the perfect trip style</h2>
+        </div>
+        <div class="category-grid">
+          <article class="category-card scroll-reveal scroll-reveal--scale" style="--reveal-delay: 0ms">
+            <div class="category-icon">🏖️</div>
+            <h3>Beach escapes</h3>
+            <p>Discover relaxing coastal resorts, private sands, and warm blue waters.</p>
+          </article>
+          <article class="category-card scroll-reveal scroll-reveal--scale" style="--reveal-delay: 90ms">
+            <div class="category-icon">🌄</div>
+            <h3>Nature discovery</h3>
+            <p>Explore forests, mountains, and scenic panoramas with guided adventures.</p>
+          </article>
+          <article class="category-card scroll-reveal scroll-reveal--scale" style="--reveal-delay: 180ms">
+            <div class="category-icon">🏙️</div>
+            <h3>City breaks</h3>
+            <p>Enjoy premium city stays, cultural tours, and iconic destination highlights.</p>
+          </article>
+          <article class="category-card scroll-reveal scroll-reveal--scale" style="--reveal-delay: 270ms">
+            <div class="category-icon">🎒</div>
+            <h3>Adventure travel</h3>
+            <p>Book thrilling experiences, active itineraries, and once-in-a-lifetime journeys.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="srilanka" class="srilanka-section scroll-reveal scroll-reveal--fade">
+        <div class="section-header scroll-reveal scroll-reveal--up">
+          <p class="eyebrow">Sri Lanka destinations</p>
+          <h2>Explore must-see Sri Lanka highlights</h2>
+        </div>
+        <div class="location-grid" id="locationGrid" aria-live="polite">
+          <p class="section-loading">Loading destinations…</p>
+        </div>
+      </section>
+
+      <section id="story" class="story-section scroll-reveal scroll-reveal--fade">
+        <div class="section-header scroll-reveal scroll-reveal--up">
+          <p class="eyebrow">Our Story</p>
+          <h2>Travel Partner is built for unforgettable trips</h2>
+        </div>
+        <div class="story-copy scroll-reveal scroll-reveal--left">
+          <p>Travel Partner began with one simple idea: to connect travelers with authentic journeys designed around local culture, comfort, and adventure. Our team creates every experience to feel personal, reliable, and exciting—so every trip becomes a story worth sharing.</p>
+          <p>From planning to departure, we support every step with expert advice, flexible itineraries, and trusted partners on the ground. Whether you want a relaxing coastal escape or a scenic cultural route, Travel Partner makes travel easy and memorable.</p>
+        </div>
+      </section>
+
+      <section id="blog" class="blog-section scroll-reveal scroll-reveal--fade">
+        <div class="section-header scroll-reveal scroll-reveal--up">
+          <p class="eyebrow">Blog</p>
+          <h2>Travel insights and inspiration</h2>
+        </div>
+        <div class="blog-grid">
+          <article class="blog-card scroll-reveal scroll-reveal--up" style="--reveal-delay: 0ms">
+            <h3>Top 5 Sri Lanka Highlights</h3>
+            <p>Discover the must-see spots from historic ruins to coastal adventures in Sri Lanka.</p>
+          </article>
+          <article class="blog-card scroll-reveal scroll-reveal--up" style="--reveal-delay: 120ms">
+            <h3>Packing tips for a smooth trip</h3>
+            <p>Essential advice to keep your bags light and your travel days stress-free.</p>
+          </article>
+          <article class="blog-card scroll-reveal scroll-reveal--up" style="--reveal-delay: 240ms">
+            <h3>How to plan a custom itinerary</h3>
+            <p>Learn our process for building tailored journeys that fit your style and budget.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="destinations" class="destinations-section scroll-reveal scroll-reveal--fade">
+        <div class="section-header scroll-reveal scroll-reveal--up">
+          <p class="eyebrow">Popular Destinations</p>
+          <h2>Browse top travel locations</h2>
+        </div>
+        <div id="searchFilterBanner" class="search-filter-banner" hidden></div>
+        <div id="destinationGrid" class="destination-grid"></div>
+      </section>
+
+      <section id="contact" class="booking-section scroll-reveal scroll-reveal--fade">
+        <div class="booking-card scroll-reveal scroll-reveal--scale">
+          <div class="booking-card-header">
+            <div>
+              <p class="eyebrow">Book a trip</p>
+              <h2>Start your itinerary planning</h2>
+            </div>
+            <span class="booking-label">Book now</span>
+          </div>
+          <p>Share your travel preferences and our team will prepare a tailored itinerary for your next adventure.</p>
+          <form id="contactForm" class="contact-form">
+            <label>
+              Name
+              <input type="text" id="nameInput" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" id="emailInput" placeholder="Your email" required />
+            </label>
+            <label>
+              Trip details
+              <textarea id="messageInput" placeholder="Tell us your destination, dates and travel style" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Book now</button>
+          </form>
+          <div id="formStatus" class="form-status"></div>
+      </section>
+    </main>
+
+    <footer class="scroll-reveal scroll-reveal--up">
+      <p>Travel Partner © 2026. Built to inspire your next journey.</p>
+    </footer>
+
+    <script src="scroll-animations.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

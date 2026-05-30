@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Travel Partner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="auth-page">
+      <section class="auth-card">
+        <div class="auth-top">
+          <div class="brand-mark">🧭</div>
+          <div>
+            <strong>Travel Partner</strong>
+            <p class="auth-tagline">Set up your traveler account in a few easy steps.</p>
+          </div>
+        </div>
+        <h1>Create your account</h1>
+        <p class="auth-intro">Create your account and start exploring amazing destinations.</p>
+        <form id="registerForm">
+          <label>
+            Name
+            <input type="text" id="name" required autocomplete="name" />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" required autocomplete="email" />
+          </label>
+          <label>
+            Password
+            <input type="password" id="password" required autocomplete="new-password" />
+          </label>
+
+          <button type="submit" class="btn btn-primary">Create account</button>
+          <p id="status" class="status-text"></p>
+        </form>
+        <div class="auth-footnote">
+          <p>Already registered? <a href="login.html">Log in here</a>.</p>
+
+        </div>
+      </section>
+    </main>
+    <script src="register.js"></script>
+  </body>
+</html>

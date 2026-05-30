@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout | Travel Partner</title>
+    <meta name="description" content="Complete your travel booking — enter your address and choose your payment method." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="checkout-body">
+
+    <!-- Top Bar -->
+    <nav class="checkout-topbar">
+      <a href="index.html" class="checkout-back">
+        <span>←</span> Back to destinations
+      </a>
+      <div class="nav-brand" style="pointer-events:none;">
+        <span class="brand-mark">🧭</span>
+        <strong>Travel Partner</strong>
+      </div>
+      <div style="width:160px;"></div>
+    </nav>
+
+    <main class="checkout-main">
+
+      <!-- Destination Summary Banner -->
+      <div class="checkout-dest-banner" id="destBanner">
+        <div class="checkout-dest-img-wrap">
+          <img id="destImg" src="" alt="" onerror="this.style.display='none'" />
+        </div>
+        <div class="checkout-dest-info">
+          <p class="eyebrow">You are booking</p>
+          <h2 id="destName">Loading…</h2>
+          <p class="checkout-dest-price" id="destPrice"></p>
+          <p class="checkout-travel-date" id="destTravelDate" hidden></p>
+          <label class="checkout-qty-label" for="bookingQty">Travelers</label>
+          <input type="number" id="bookingQty" class="checkout-qty-input" min="1" max="20" value="1" aria-label="Number of travelers" />
+        </div>
+      </div>
+
+      <!-- Step Progress -->
+      <div class="checkout-stepper">
+        <div class="step-item active" id="stepItem1">
+          <div class="step-circle">1</div>
+          <span>Address</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" id="stepItem2">
+          <div class="step-circle">2</div>
+          <span>Payment</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step-item" id="stepItem3">
+          <div class="step-circle">3</div>
+          <span>Confirm</span>
+        </div>
+      </div>
+
+      <!-- ───── STEP 1: ADDRESS ───── -->
+      <section class="checkout-card" id="step1">
+        <h2 class="checkout-card-title">📍 Billing Address</h2>
+
+        <form id="addressForm" novalidate>
+          <div class="co-row">
+            <div class="co-field">
+              <label for="billName">Full Name *</label>
+              <input type="text" id="billName" placeholder="John Silva" required />
+            </div>
+            <div class="co-field">
+              <label for="billEmail">Email Address *</label>
+              <input type="email" id="billEmail" placeholder="you@email.com" required />
+            </div>
+          </div>
+          <div class="co-row">
+            <div class="co-field">
+              <label for="billPhone">Phone Number *</label>
+              <input type="tel" id="billPhone" placeholder="+94 77 123 4567" required />
+            </div>
+            <div class="co-field">
+              <label for="billCountry">Country *</label>
+              <select id="billCountry" required>
+                <option value="">Select country…</option>
+                <option>Sri Lanka</option>
+                <option>India</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>Australia</option>
+                <option>Germany</option>
+                <option>France</option>
+                <option>Canada</option>
+                <option>Singapore</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="co-field co-full">
+            <label for="billAddr">Address Line 1 *</label>
+            <input type="text" id="billAddr" placeholder="No. 12, Main Street" required />
+          </div>
+          <div class="co-field co-full">
+            <label for="billAddr2">Address Line 2</label>
+            <input type="text" id="billAddr2" placeholder="Apartment, suite, floor (optional)" />
+          </div>
+          <div class="co-row">
+            <div class="co-field">
+              <label for="billCity">City *</label>
+              <input type="text" id="billCity" placeholder="Colombo" required />
+            </div>
+            <div class="co-field">
+              <label for="billState">State / Province *</label>
+              <input type="text" id="billState" placeholder="Western Province" required />
+            </div>
+            <div class="co-field">
+              <label for="billZip">ZIP / Postal Code *</label>
+              <input type="text" id="billZip" placeholder="00100" required />
+            </div>
+          </div>
+
+          <!-- Shipping Toggle -->
+          <div class="ship-toggle-wrap">
+            <label class="toggle-label" for="sameAsShipping">
+              <input type="checkbox" id="sameAsShipping" checked />
+              <span class="toggle-box"></span>
+              Shipping address is the same as billing
+            </label>
+          </div>
+
+          <!-- Shipping Address (hidden by default) -->
+          <div id="shippingSection" class="shipping-section" style="display:none;">
+            <h3 class="checkout-card-subtitle">📦 Shipping Address</h3>
+            <div class="co-row">
+              <div class="co-field">
+                <label for="shipName">Full Name *</label>
+                <input type="text" id="shipName" placeholder="John Silva" />
+              </div>
+              <div class="co-field">
+                <label for="shipCountry">Country *</label>
+                <select id="shipCountry">
+                  <option value="">Select country…</option>
+                  <option>Sri Lanka</option>
+                  <option>India</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>Australia</option>
+                  <option>Germany</option>
+                  <option>France</option>
+                  <option>Canada</option>
+                  <option>Singapore</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="co-field co-full">
+              <label for="shipAddr">Address Line 1 *</label>
+              <input type="text" id="shipAddr" placeholder="No. 12, Main Street" />
+            </div>
+            <div class="co-field co-full">
+              <label for="shipAddr2">Address Line 2</label>
+              <input type="text" id="shipAddr2" placeholder="Apartment, suite, floor (optional)" />
+            </div>
+            <div class="co-row">
+              <div class="co-field">
+                <label for="shipCity">City *</label>
+                <input type="text" id="shipCity" placeholder="Colombo" />
+              </div>
+              <div class="co-field">
+                <label for="shipState">State / Province *</label>
+                <input type="text" id="shipState" placeholder="Western Province" />
+              </div>
+              <div class="co-field">
+                <label for="shipZip">ZIP / Postal Code *</label>
+                <input type="text" id="shipZip" placeholder="00100" />
+              </div>
+            </div>
+          </div>
+
+          <p class="co-error" id="addrError"></p>
+          <button type="submit" class="btn btn-primary co-next-btn" id="addrNextBtn">
+            Continue to Payment →
+          </button>
+        </form>
+      </section>
+
+      <!-- ───── STEP 2: PAYMENT ───── -->
+      <section class="checkout-card" id="step2" style="display:none;">
+        <h2 class="checkout-card-title">💳 Payment Method</h2>
+
+        <div class="payment-options">
+          <!-- Card Option -->
+          <label class="pay-option" id="payCardLabel">
+            <input type="radio" name="payMethod" value="card" id="payCard" checked />
+            <div class="pay-option-inner">
+              <div class="pay-icon">💳</div>
+              <div>
+                <strong>Credit / Debit Card</strong>
+                <p>Visa, Mastercard, Amex — secure online payment</p>
+              </div>
+              <span class="pay-check">✓</span>
+            </div>
+          </label>
+          <!-- COD Option -->
+          <label class="pay-option" id="payCodLabel">
+            <input type="radio" name="payMethod" value="cod" id="payCod" />
+            <div class="pay-option-inner">
+              <div class="pay-icon">💵</div>
+              <div>
+                <strong>Cash on Delivery</strong>
+                <p>Pay in cash when your tour begins</p>
+              </div>
+              <span class="pay-check">✓</span>
+            </div>
+          </label>
+        </div>
+
+        <!-- Card Details Form -->
+        <div id="cardDetails">
+          <div class="co-field co-full" style="margin-top:1.5rem;">
+            <label for="cardName">Cardholder Name *</label>
+            <input type="text" id="cardName" placeholder="JOHN SILVA" autocomplete="cc-name" />
+          </div>
+          <div class="co-field co-full">
+            <label for="cardNumber">Card Number *</label>
+            <div class="card-number-wrap">
+              <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456"
+                     maxlength="19" autocomplete="cc-number" inputmode="numeric" />
+              <span class="card-brand" id="cardBrand">💳</span>
+            </div>
+          </div>
+          <div class="co-row">
+            <div class="co-field">
+              <label for="cardExpiry">Expiry *</label>
+              <input type="text" id="cardExpiry" placeholder="MM / YY" maxlength="7" autocomplete="cc-exp" />
+            </div>
+            <div class="co-field">
+              <label for="cardCvv">CVV *</label>
+              <input type="password" id="cardCvv" placeholder="•••" maxlength="4" autocomplete="cc-csc" />
+            </div>
+          </div>
+        </div>
+
+        <!-- COD Notice -->
+        <div id="codNotice" class="cod-notice" style="display:none;">
+          <span class="cod-icon">📋</span>
+          <div>
+            <strong>Cash on Delivery selected</strong>
+            <p>You will pay the full amount in cash to our travel representative at the start of your tour. No payment is needed right now.</p>
+          </div>
+        </div>
+
+        <p class="co-error" id="payError"></p>
+
+        <div class="co-actions">
+          <button class="btn btn-outline" id="payBackBtn">← Back</button>
+          <button class="btn btn-primary" id="payNextBtn">Review Booking →</button>
+        </div>
+      </section>
+
+      <!-- ───── STEP 3: CONFIRM ───── -->
+      <section class="checkout-card" id="step3" style="display:none;">
+        <h2 class="checkout-card-title">✅ Review & Confirm</h2>
+
+        <div class="summary-grid">
+          <!-- Destination -->
+          <div class="summary-block">
+            <p class="summary-label">🗺 Destination</p>
+            <p class="summary-value" id="sumDest">—</p>
+            <p class="summary-sub" id="sumPrice">—</p>
+          </div>
+          <!-- Billing -->
+          <div class="summary-block">
+            <p class="summary-label">📍 Billing Address</p>
+            <p class="summary-value" id="sumBillingName">—</p>
+            <p class="summary-sub" id="sumBillingAddr">—</p>
+          </div>
+          <!-- Shipping -->
+          <div class="summary-block">
+            <p class="summary-label">📦 Shipping Address</p>
+            <p class="summary-value" id="sumShipName">—</p>
+            <p class="summary-sub" id="sumShipAddr">—</p>
+          </div>
+          <!-- Payment -->
+          <div class="summary-block">
+            <p class="summary-label">💳 Payment</p>
+            <p class="summary-value" id="sumPayment">—</p>
+          </div>
+        </div>
+
+        <div class="confirm-terms">
+          <label class="toggle-label" for="agreeTerms">
+            <input type="checkbox" id="agreeTerms" />
+            <span class="toggle-box"></span>
+            I agree to the <a href="#" style="color:var(--primary);">Terms & Conditions</a> and <a href="#" style="color:var(--primary);">Privacy Policy</a>
+          </label>
+        </div>
+
+        <p class="co-error" id="confirmError"></p>
+
+        <div class="co-actions">
+          <button class="btn btn-outline" id="confirmBackBtn">← Back</button>
+          <button class="btn btn-primary" id="confirmBtn">
+            <span id="confirmBtnText">Confirm Booking 🎉</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ───── SUCCESS ───── -->
+      <section class="checkout-card success-card" id="stepSuccess" style="display:none;">
+        <div class="success-icon">🎉</div>
+        <h2>Booking Confirmed!</h2>
+        <p>Thank you for choosing Travel Partner. Your booking for <strong id="successDest"></strong> has been received. Our team will reach out to you within 24 hours with your full itinerary.</p>
+        <p class="success-ref">Booking Ref: <strong id="successRef"></strong></p>
+        <a href="index.html" class="btn btn-primary" style="margin-top:2rem;">← Back to Home</a>
+      </section>
+
+    </main>
+
+    <script src="checkout.js"></script>
+  </body>
+</html>

@@ -1,0 +1,3 @@
+- Scaffold a travel website starter project in the workspace.
+- Include a package.json, Express server, static public files, README, and a launch task.
+- Keep project setup simple and ready for local development.

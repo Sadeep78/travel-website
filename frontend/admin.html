@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Portal | Travel Partner</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <div class="admin-logo">
+          <span class="logo-icon">🛡️</span>
+          <h1>Admin Portal</h1>
+        </div>
+        <div class="admin-user-profile">
+          <span id="welcomeText">Loading Profile...</span>
+          <button id="logoutButton" class="btn btn-outline btn-sm">Sign Out</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="admin-dashboard">
+      <!-- Summary Statistics Section -->
+      <section class="admin-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon stat-blue">🎟️</div>
+          <div class="stat-info">
+            <p class="stat-label">Total Bookings</p>
+            <h3 id="statTotalBookings">-</h3>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-green">💰</div>
+          <div class="stat-info">
+            <p class="stat-label">Total Volume</p>
+            <h3 id="statTotalVolume">-</h3>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon stat-orange">✉️</div>
+          <div class="stat-info">
+            <p class="stat-label">Total Inquiries</p>
+            <h3 id="statTotalInquiries">-</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Tabs -->
+      <nav class="admin-tabs">
+        <button class="tab-btn active" id="tabBookings">
+          <span class="tab-icon">🎟️</span> Tour Bookings
+        </button>
+        <button class="tab-btn" id="tabInquiries">
+          <span class="tab-icon">✉️</span> Customer Inquiries
+        </button>
+      </nav>
+
+      <!-- Content Sections -->
+      <section class="admin-content-card">
+        <!-- Bookings Tab Panel -->
+        <div id="bookingsSection" class="dashboard-section active">
+          <div class="section-title-bar">
+            <h2>Manage Bookings</h2>
+          </div>
+          <div id="bookingsList" class="bookings-grid">
+            <p class="loading-state">Loading bookings...</p>
+          </div>
+        </div>
+
+        <!-- Inquiries Tab Panel -->
+        <div id="inquiriesSection" class="dashboard-section">
+          <div class="section-title-bar">
+            <h2>Contact Inquiries</h2>
+          </div>
+          <div id="requestsList" class="inquiries-grid">
+            <p class="loading-state">Loading inquiries...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
