@@ -10,6 +10,7 @@ A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL*
 
 💻 Tech Stack
 
+
 🔹 Node.js
 
 🔹 Express.js
@@ -22,7 +23,8 @@ A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL*
 
 
 
-✨ Key Features Implemented
+## ✨ Key Features Implemented
+
 
 🔐 User Registration & Login System
 
@@ -54,7 +56,9 @@ A full-stack Sri Lanka travel site built with **Node.js**, **Express**, **MySQL*
 
 
 
-🎯 What I Learned
+## 🎯 What I Learned
+
+
 
 ✅ Full-Stack Development
 
